@@ -15,7 +15,7 @@ jobs:
     - name: Receive content of test file
       uses: actions/download-artifact@v3
       with:
-        name: test.txt
+        name: 'test.txt'
         path: ${{ github.workspace }}
     - name: Echo downloaded data
       run: echo ${{steps.download.outputs.download-path}}
