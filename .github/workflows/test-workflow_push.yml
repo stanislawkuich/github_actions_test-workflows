@@ -16,6 +16,6 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: test.txt
-        path: .
+        path: ${pwd}
     - name: Echo downloaded data
       run: echo ${{steps.download.outputs.download-path}}
