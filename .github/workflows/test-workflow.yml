@@ -1,8 +1,6 @@
 name: test-workflow with cron
 
-on:
-  schedule:
-    - cron: '24 * * * *'
+on: push
 
 jobs:
   test_schedule:
