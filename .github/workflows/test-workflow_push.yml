@@ -17,5 +17,5 @@ jobs:
     - name: Commit
       run: |
         git add test.txt
-        git commit -m "update"
+        git diff --exit-code || git commit -m "auto update"
         git push
