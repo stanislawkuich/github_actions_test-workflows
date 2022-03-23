@@ -12,11 +12,10 @@ jobs:
       run: git config --global user.name "Test bot"
     - name: Download test file
       run: curl --insecure --request GET https://raw.githubusercontent.com/stanislawkuich/test_github_actions/master/test.txt
-    - name: show
-      run: pwd;ls -alh
     - name: Receive content of test file
       uses: actions/download-artifact@v3
       with:
         name: test.txt
+        path: .
     - name: Echo downloaded data
       run: echo ${{steps.download.outputs.download-path}}
