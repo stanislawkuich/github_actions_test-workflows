@@ -11,7 +11,7 @@ jobs:
     - name: Git configuration
       run: git config --global user.name "Test bot"
     - name: Download test file
-      run: curl --insecure --request GET https://raw.githubusercontent.com/stanislawkuich/test_github_actions/master/test.txt
+      run: curl --insecure -o test.txt --request GET https://raw.githubusercontent.com/stanislawkuich/test_file_repo/main/test2.txt
     - name: show secret value
       env: 
         TOKEN: ${{ secrets.TEST }}
