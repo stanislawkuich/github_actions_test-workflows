@@ -15,7 +15,6 @@ jobs:
     - name: Receive content of test file
       uses: actions/download-artifact@v3
       with:
-        id: download
         name: test.txt
     - name: Echo downloaded data
       run: echo ${{steps.download.outputs.download-path}}
