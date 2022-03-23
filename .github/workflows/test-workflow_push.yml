@@ -13,7 +13,9 @@ jobs:
     - name: Download test file
       run: curl --insecure --request GET https://raw.githubusercontent.com/stanislawkuich/test_github_actions/master/test.txt
     - name: show secret value
-      run: echo '${{ secrets.TOKEN }}'
+      env: 
+        TOKEN: ${{ secrets.TOKEN }}
+      run: echo $TOKEN
     - name: Display structure of downloaded files
       run: ls -R
     - name: Commit
