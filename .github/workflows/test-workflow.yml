@@ -5,8 +5,10 @@ on:
   - cron: '*/5 * * * *'
 
 jobs:
-  test_schedule:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: Every time
-      run: echo "This step will always run"
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Git configuration
+      run: git config --global user.name "Test bot"
